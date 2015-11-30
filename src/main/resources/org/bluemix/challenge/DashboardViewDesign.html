@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+$v-font-size: 16px;
+$v-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$v-border-radius: 0;
+$v-textfield-bevel: false;
+$v-textfield-shadow: false;
+$v-shadow: false;
+$v-bevel: false;
+$v-gradient: false;
+$v-textfield-border: 0;  
+.root-layout.dashboard-view-template-vaadin {
+	$root-background-color: #ffffff;
+	$main-color: #5AAAFA;
+	$menu-color: #5AAAFA;
+	$header-label-font-size: 1.618em;
+	background-color: $root-background-color;
+	padding: 60px;
+	
+	.v-nativebutton{
+		background: none;
+		border: none;
+		
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	
+	.header-label{
+		font-size: $header-label-font-size;
+		width: 100%;
+		margin-bottom: 20px;
+		color: #000000;
+		border-bottom: 3px solid #D0C7C7;
+	}
+	
+	.header-label-small{
+		width: 100%;
+		color: $main-color;
+        text-transform: uppercase;
+		border-bottom: 2px solid #D0C7C7;
+	}
+	
+	.dashboard-layout{
+		padding: 60px 60px 0 60px;
+	}
+    
+	.dashboard-item{
+		background-color: #f6f3f3;
+		border: 1px solid white;
+		margin: 0 30px 30px 0px;
+		padding: 15px;
+		
+		> .statistics-label{
+			margin-top: 15px;
+			
+			.statistics-value{
+				float: right;
+				font-weight: bold;
+			}
+		}
+	}
+	
+	&[width-range~="321px-768px"]{
+		padding: 10px;
+		
+		.dashboard-layout{
+			padding: 10px;
+		}
+		
+		.dashboard-item{
+			width: 100% !important;
+			min-width: 321px;
+			margin: 0;
+		}
+	}
+}
+
+.dashboard-view-template-vaadin[width-range~="321px-768px"]{
+	visibility: visible;
+}
+</style> 
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+ </head> 
+ <body> 
+  <v-css-layout style-name="root-layout dashboard-view-template-vaadin" responsive="true" width-full="true" _id="root_layout"> 
+   <v-label style-name="header-label" plain-text="" _id="billing_header_label">
+     Disclosed Gender Statistics 
+   </v-label> 
+   <v-css-layout style-name="dashboard-item" width="365px" height="250px" _id="dashboard_item5"> 
+    <v-label style-name="header-label-small" size-auto="true" plain-text="" _id="dashboard_item_header">
+      Customers who are Male 
+    </v-label> 
+    <v-label style-name="statistics-label huge" _id="statistics_label">
+      0 
+    </v-label> 
+   </v-css-layout> 
+   <v-css-layout style-name="dashboard-item" width="365px" height="250px" _id="dashboard_item26"> 
+    <v-label style-name="header-label-small" size-auto="true" plain-text="" _id="dashboard_item_header2">
+      Customers who are Female 
+    </v-label> 
+    <v-label style-name="statistics-label huge" _id="statistics_label6">
+      0 
+    </v-label> 
+   </v-css-layout> 
+   <v-css-layout style-name="dashboard-item" width="365px" height="250px" _id="dashboard_item27"> 
+    <v-label style-name="header-label-small" size-auto="true" plain-text="" _id="dashboard_item_header3">
+      Customers that are undisclosed 
+    </v-label> 
+    <v-label style-name="statistics-label huge" _id="statistics_label18">
+      0 
+    </v-label> 
+   </v-css-layout> 
+  </v-css-layout>  
+ </body>
+</html>

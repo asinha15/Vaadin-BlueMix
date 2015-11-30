@@ -158,6 +158,15 @@ public class DummyDataService {
                 cal.set(1930 + r.nextInt(70),
                         r.nextInt(11), r.nextInt(28));
                 contact.setBirthDate(cal.getTime());
+                
+                switch( r.nextInt(fnames.length) % 3){
+                case 1:	contact.setGender(Customer.Gender.Male);
+                break;
+                case 2:	contact.setGender(Customer.Gender.Female);
+                break;
+                	default:contact.setGender(Customer.Gender.Other);	
+                }
+                
                 contactService.save(contact);
             }
             instance = contactService;
